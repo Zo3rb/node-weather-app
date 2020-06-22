@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    {{!-- Importing Favorite Icon of The Site --}}
+    <link rel="icon" href="/img/weather.png" />
+    {{!-- Importing Favorite Icon of The Site --}}
+
+    {{!-- Importing The Bootstrap CSS Here --}}
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    {{!-- Importing The Bootstrap CSS Here --}}
+
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+    {{!-- Header Partial Here --}}
+    {{>header}}
+    {{!-- Header Partial Here --}}
+
+    {{!-- Content Goes Here --}}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-8 offset-sm-0 offset-md-2 mt-sm-3 mt-md-5 text-center">
+                <form class="w-100">
+                    <div class="form-group">
+                        <label for="weatherInput">You Can Check Any City Around The World Weather Here</label>
+                        <input type="text" placeholder="Enter Location Here eg:cairo" class="form-control formInput"
+                            id="weatherInput">
+                    </div>
+                    <button type="submit" class="btn btn-primary formButton" disabled>Get Weather</button>
+                </form>
+                <p id="msg1" class="text-center mt-3"></p>
+                <div id="weatherContainer" class="w-100"></div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Content Goes Here --}}
+
+    {{!-- Importing The jQuery / Popper / Bootstrap JS Files Here --}}
+    <script src="/js/index.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    {{!-- Importing The jQuery / Popper / Bootstrap JS Files Here --}}
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    {{!-- Importing Favorite Icon of The Site --}}
+    <link rel="icon" href="/img/weather.png" />
+    {{!-- Importing Favorite Icon of The Site --}}
+
+    {{!-- Importing The Bootstrap CSS Here --}}
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    {{!-- Importing The Bootstrap CSS Here --}}
+
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+    {{!-- Header Partial Here --}}
+    {{>header}}
+    {{!-- Header Partial Here --}}
+
+    {{!-- Content Goes Here --}}
+    <h1 class="h2 bg-primary text-white d-inline-block mt-5 mb- 2 p-2">Help Page: </h1>
+    <h4 class="text-muted">{{msg}}</h4>
+    {{!-- Content Goes Here --}}
+
+    {{!-- Importing The jQuery / Popper / Bootstrap JS Files Here --}}
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    {{!-- Importing The jQuery / Popper / Bootstrap JS Files Here --}}
+
+</body>
+
+</html>
