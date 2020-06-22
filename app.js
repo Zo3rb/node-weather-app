@@ -2,15 +2,15 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
-const getWeather = require('./utils/weather');
+const getWeather = require('./src/weather');
 
 // Initialize The App Instance of Express
 const app = express();
 
 // Creating The Directories Path of The (Views, Partials, Public).
-const VIEWS_DIRECTORY_PATH = path.join(__dirname, "../templates/views");
-const PARTIALS_DIRECTORY_PATH = path.join(__dirname, '../templates/partials');
-const PUBLIC_DIRECTORY_PATH = path.join(__dirname, '../public');
+const VIEWS_DIRECTORY_PATH = path.join(__dirname, "./templates/views");
+const PARTIALS_DIRECTORY_PATH = path.join(__dirname, './templates/partials');
+const PUBLIC_DIRECTORY_PATH = path.join(__dirname, './public');
 
 // Setting The View Engine & Directory, Registering hbs Partials and use Express Static Middleware
 app.set('view engine', 'hbs');
@@ -87,8 +87,8 @@ app.get('*', (req, res) => {
 });
 
 // Launch The Server Up and Make it Listen to The incoming Requests
-const PORT = 3000;
-app.listen(PORT, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
     console.log("The Server is Up Now");
-    console.log(`The Server is Running on Port ${PORT}`);
+    console.log(`The Server is Running on Port ${port}`);
 });
