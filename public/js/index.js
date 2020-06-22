@@ -1,6 +1,6 @@
 // Fetching The Weather JSON From Server With Location with This Function
 const getCurrentWeather = async location => {
-    const response = await fetch(`http://localhost:3000/weather?city=${location}`);
+    const response = await fetch(`/weather?city=${location}`);
     const parsedData = await response.json();
     if (response.error) {
         return response.error;
