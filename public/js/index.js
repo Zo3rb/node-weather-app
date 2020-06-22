@@ -1,6 +1,6 @@
 // Fetching The Weather JSON From Server With Location with This Function
 const getCurrentWeather = async location => {
-    const response = await fetch(`https://nodeweatherappwithandrewmead.herokuapp.com//weather?city=${location}`);
+    const response = await fetch(`https://nodeweatherappwithandrewmead.herokuapp.com/weather?city=${location}`);
     const parsedData = await response.json();
     if (response.error) {
         return response.error;
