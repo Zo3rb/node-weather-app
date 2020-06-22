@@ -7,7 +7,7 @@ const API_KEY = "ff07332bf12d3744e1691a3180ed0b97";
 const getWeather = async location => {
     try {
         if (location) {
-            // The Site didn't work After Deploying duo the CORS redirection error (Added The Heroku CORS) https://cors-anywhere.herokuapp.com/
+            // The Site didn't work After Deploying duo the CORS redirection error (Added The Heroku CORS) https://cors-anywhere.herokuapp.com/ Caused a Problem after Deploy
             const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`);
             const weather = {
                 main: response.data.weather[0].main,
